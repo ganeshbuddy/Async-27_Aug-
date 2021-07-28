@@ -1,0 +1,23 @@
+﻿using System;
+using System.Threading.Tasks;
+using System.Net.Http;
+namespace ConsoleApp1
+{
+    class Program
+    {
+
+        static void Main(string[] args)
+        {
+            Task<int> result = add();
+            Console.WriteLine("length: {0}", result.Result);
+        }
+        // Asynchronous method  
+        async static Task<int> add()
+        {
+            Task<string> TaskUrl = "GANESHRAJ";
+            string result = await TaskUrl;
+            return result.Length;
+        }
+
+    }
+}
